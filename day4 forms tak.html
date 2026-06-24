@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>1.Basic Form Structure</h3>
+    <form action="nav1.html" method="get">
+        <lable for="name"> Name:</lable>
+        <input type="text" name="name" id="name"><br><br>
+        <lable for="age">Age:</lable>
+        <input type="number" name="age" id="age"><br><br>
+        <label for="number">Phone Number:</label>
+        <input type="tel" name="number" id="number"><br><br>
+        <lable for="email">Email id:</lable>
+        <input type="email" name="email" id="email"><br><br>
+        <input type="submit" name="submit" id="submit">
+
+        <input type="reset" name="reset" id="reset">
+
+    </form><br><br>
+
+    <h3>2.log in Form</h3>
+    <form action="login.html" method="get">
+        <lable for="fname">FirstName:</lable>
+        <input type="text" name="fname" id="fname"><br>
+        <lable for="lname">LastName:</lable>
+        <input type="text" name="lname" id="lname"><br>
+        <lable for="email">Email Address:</lable>
+        <input type="email" name="email" id="email"><br>
+        <lable for="pwd">password:</lable>
+        <input type="password" name="pwd" id="pwd"><br>
+        
+         <input type="submit" value="login"><br>
+    </form>
+
+    <h3>3.using checkboxes and radio buttons</h3>
+    <b>choose your gender</b>
+    <input type="radio" name="gender" id="male">
+    <lable for="male">Male</lable>
+    <input type="radio" name="gender" id="female">
+    <lable for="female">Male</lable><br><br>
+
+    <b>Select your Favorite Programming Languages</b>
+    <input type="checkbox" name="java" id="java">
+    <label for="java">Java</label>
+    <input type="checkbox" name="python" id="python">
+    <label for="python">Python</label>
+    <input type="checkbox" name="c++" id="c++">
+    <label for="c++">C++</label>
+    <input type="checkbox" name="php" id="php">
+    <label for="php">PHP</label><br><br>
+
+    <h3>4.LabeL and Placeholder</h3>
+    <label for="name">Name:</label>
+    <input type="text" name="name" id="name" placeholder="enter your name"><br><br>
+    <label for="age">Age:</label>
+    <input type="number" name="age" id="age" placeholder="enter your age"><br>
+
+    <h3>5.Use required to make fields mandatory. Practice building a signup form where name, email, and password are required.</h3>
+    <form>
+        <lable for="name"> Name:</lable>
+        <input type="text" name="name" id="name" required><br><br>
+        <lable for="age">Age:</lable>
+        <input type="number" name="age" id="age" required><br><br>
+        <label for="number">Phone Number:</label>
+        <input type="tel" name="number" id="number" required><br><br>
+        <lable for="email">Email id:</lable>
+        <input type="email" name="email" id="email" required><br><br>
+        <input type="submit" name="submit" id="submit">
+
+        <input type="reset" name="reset" id="reset">
+    </form><br>
+
+    <h3>6.Build a registration form with text, email, password, gender (radio), hobbies (checkbox), age (number), and submit button. Include labels, placeholders, and validation.</h3>
+    <form>
+        <lable for="name">Name:</lable>
+        <input type="text" name="name" id="name"><br><br>
+
+        <lable for="age">Age:</lable>
+        <input type="number" name="age" id="age" min="10" max="90"><br><br>
+
+        <lable for="email">email:</lable>
+        <input type="email" name="email" id="email"><br><br>
+
+        <lable for="pwd">Password:</lable>
+        <input type="pwd" name="pwd" id="pwd"><br><br>
+
+        <lable for="username">userame:</lable>
+        <input type="username" name="userame" id="username"><br><br>
+
+        <lable for="dob">Date Of Birth:</lable>
+        <input type="date" name="dob" id="dob"><br><br>
+
+        <lable for="gender">Gender:</lable>
+        <input type="radio" name="gender" id="Male">
+        <label for="Male">Male</label>
+        <input type="radio" name="gender" id="feMale">
+        <label for="feMale">FeMale</label><br><br>
+
+        <label for="Languages">Choose Your Languauges:</label>
+        <input type="checkbox" name="tamil" id="tamil">
+        <label for="tamil">Tamil</label>
+        <input type="checkbox" name="malayalam" id="malayalam">
+        <label for="malayalam">Malayalam</label>
+        <input type="checkbox" name="hindil" id="hindi">
+        <label for="hindi">Hindi</label>
+        <input type="checkbox" name="english" id="engllish">
+        <label for="english">english</label><br><br>
+
+        <label for="resume">Upload Your Resume</label><br>
+        <input type="file" name="resume" id="resume"><br><br>
+
+        <label for="resume">Upload Your Resume</label><br>
+        <input type="file" name="resume" id="resume"><br><br>
+
+        <label for="feedback">feedback</label><br>
+        <textarea id="feedback" name="feedback" id="feedback" rows="5" cols="40"></textarea><br><br>
+
+       <input type="submit">
+       <input type="reset">
+
+
+        
+
+        
+    
+
+
+
+
+
+
+        
+    </form>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
