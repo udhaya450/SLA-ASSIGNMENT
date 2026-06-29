@@ -1,0 +1,56 @@
+        .s1{
+            width=300px;
+            padding:20px;
+            border: 10px solid green;
+        }
+        .s2{
+            width: 200px;
+            background-color: aliceblue;
+        }
+        .s3{
+            border: 2px solid red;
+        }
+        .s4{
+            background-color: aquamarine;
+            width: 300px;
+            padding: 25px;
+        }
+        .s5{
+            margin-left: 25px;
+        }
+        .s9{
+            width: 600px;
+            padding: 20px;
+            border: 2px;
+            margin: center;
+
+        }
+        .s10{
+            width: 600px;
+            display: flex;
+            
+
+        }
+        .butt1{
+            flex: 1;
+            height: 50px;
+            padding: 2%;
+            box-sizing: border-box;
+        }
+
+        .s11{
+            background-color: brown;
+            padding-top: 40px;
+            padding-right: 10px;
+            padding-bottom: 20px;
+            padding-left:50px ;
+        }
+        .box{
+            width: 300px;
+            margin: 30px;
+            padding: 30px;
+            border: 2px solid black;
+            background-color: blueviolet;
+        }
+    </style>
+</head>
