@@ -1,0 +1,19 @@
+p{
+    color:aqua;
+    line-height: 1.6;
+}
+.intro
+{
+    font-style: italic;
+}
+.highlight{
+    background-color: crimson;
+}
+#header{
+    color:coral;
+    font-size: 32px;
+}
+.box{
+    border: 1px solid black;
+    padding:18px;
+}
