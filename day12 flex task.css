@@ -1,0 +1,93 @@
+.container
+{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100v;
+}
+.item1
+{
+    width: 200px;
+    height: 100px;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img
+{
+    width: 80px;
+    height: 40px;
+    padding: 10px;
+}
+nav{
+    background-color: darkblue;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+a
+{
+    color: white;
+    display: flex;
+    padding: 20px;
+    text-decoration: none;
+}
+a:hover
+{
+    color: red;
+} 
+.container1
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+.item
+{
+    display: flex;
+    width: 100px;
+    height: 60px;
+    background-color:pink;
+    justify-content: center;
+    align-items: center;
+
+} 
+
+
+
+ .container{
+    display: flex;
+    gap: 20px;
+    align-items: stretch;
+}
+
+.fruit{
+    flex: 1;
+    background-color: gold;
+    border: 2px solid black;
+
+    padding: 20px;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    flex: 0 0 250px;
+    background-color: gold;
+    padding: 20px;
+}
+
+.main{
+    flex: 1;
+    background-color: wheat;
+    padding: 20px;
+}
