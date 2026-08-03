@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     1. Create an HTML Customer Registration Form with the following fields: 
+•Customer Name ,Mobile Number, Email Address, Gender (Radio Button),City (Dropdown) 
+•Services Required (Checkbox),Upload ID Proof, Submit & Reset Buttons 
+
+<form>
+    <label for="custname">Customer Name:</label>
+    <input type="text" id="custname" name="custname"><br><br>
+
+    <label for="mobno">Mobile Number:</label>
+    <input type="tel" id="mobnum" name="mobnum"><br><br>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email"><br><br>
+
+    <label for="gender">Gender:</label>
+    <input type="radio" name="gender" id="male">
+    <label for="male">Male</label>                                                 
+    <input type="radio" name="gender" id="female">
+    <label for="female">Female</label><br><br>
+
+    <label for="city">City:</label>
+    <select id="city" name="city">
+        <option value="slecet">Select Your City</option>
+        <option value="chennai">Chennai</option>
+        <option value="bangalore">Bangalore</option>
+        <option value="hyderabad">Hyedrabad</option>
+        <option value="mumbai">Mumbai</option>
+    </select><br><br>
+
+    <label for="services">Services Required:</label>
+    <input type="checkbox" name="tech support" id="tech support">
+    <label for="tech support">Tech support</label> 
+    <input type="checkbox" name="customer care" id="customer care">
+    <label for="customer care">Customer Care</label> 
+    <input type="checkbox" name="network assist" id="network assist">
+    <label for="network assist">Network assist</label> <br><br> 
+
+    <!-- <label for="Proof">Upload Proof</label>
+    <input type="object" name="Proof" id="Proof" accept=".jpeg,.pdf"><br><br> -->
+
+    <label for="proof">Upload Your Proof</label>
+    <input type="file" name="proof" id="proof"><br><br>
+
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button><br><br>
+
+</form>
+
+    2. Create an HTML Customer Details Table with 6 records containing: 
+•Customer ID, Customer Name, City, Membership Type, Purchase Amount 
+Highlight customers whose Purchase Amount is above ₹50,000 using inline CSS. 
+
+<table border="2px solid black" width="800px">
+    <tr>
+        <th>Customer ID</th>
+        <th>Customer Name</th>
+        <th>City</th>
+        <th>Membership Type</th>
+        <th>Purchase Amount</th>
+    </tr>
+    <tr>
+        <td>1001</td>
+        <td>Arthur</td>
+        <td>Miami</td>
+        <td>Credit Card</td>
+        <td>$1500</td>
+    </tr>
+    <tr>
+        <td>1002</td>
+        <td>Henry</td>
+        <td>New york</td>
+        <td>Debit Card</td>    
+        <td>$1800</td>
+    </tr>
+    
+    <tr style="background-color: cornflowerblue;">
+        <td>1003</td>
+        <td>Bruce</td>
+        <td>Los Angeles</td>
+        <td>Pay Pal</td>    
+        <td>$50000</td>
+    </tr>
+    <tr>
+        <td>1003</td>
+        <td>Martha</td>
+        <td>Wahsington D.C</td>
+        <td>Pay Pal</td>    
+        <td>$1600</td>
+    </tr>
+</table>
+
+3. Create a webpage with the heading "Customer Relationship Management (CRM)" containing: 
+•One paragraph about CRM, Ordered list of 5 CRM Features ,Unordered list of 5 CRM Software 
+
+<h1 style="text-align: center;">Customer Relationship Management</h1>
+<p style="margin-left: 50px;">Customer Relationship Management (CRM) is a system that helps businesses manage their interactions with current and potential customers. It stores customer information, tracks sales, manages customer inquiries, and improves communication. CRM software enables organizations to build stronger customer relationships, increase sales, enhance customer satisfaction, and streamline business processes by keeping all customer-related data in one place.</p>
+<ol>
+    <li>Customer Database Management</li>
+    <li>Sales Management</li>
+    <li>Lead Management</li>
+    <li>Customer Support</li>
+    <li>Task and Activity Management</li>
+</ol>
+
+<ul>
+    <li>Salesforce</li>
+    <li>HubSpot</li>
+    <li>Microsoft Dynamics 365</li>
+    <li>SAP</li>
+    <li>Oracle</li>
+</ul><br><br>
+
+4. Design a Customer Profile Page containing: 
+•Customer Photo, Customer Name, Email, Phone Number, Address, Membership Type 
+•Clickable Email, Clickable Phone Number 
+
+ <div class="four">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9JiSI4DoBIG0Xr1BdGbBvJTZUSNQBux6HHhj_3zfzMQ&s=10" alt="elon musk" style="text-align: center;"><br><br>
+    <!-- <h2>Customer Name : Elon Musk</h2> -->
+ </div> 
+ <div class="four1">
+    <h4>CustomerName : Elon Musk</h4>
+    <h4>Customer Email : XEA12@gmail.com </h4>
+    <h4>Customer Phone Number : +1 800 9786534210</h4>
+    <h4>Customer Address : BelAir 8/90 , Los Angeles... </h4>
+    <h4>Membership Type : Paypal</h4>
+
+
+    <a href="https://www.spacex.com/contacts">media2spacex.com</a>
+    <a href="" onclick="alert">+1 800 987065421</a>
+</div>
+
+5. Create a webpage containing: 
+•Company Logo, Heading, Two paragraphs, Ordered list, Unordered list 
+•Customer Details Table (6 rows), Customer Image, Contact Us Hyperlink 
+
+<div class="five">
+    <img src="https://i0.wp.com/www.dafontfree.co/wp-content/uploads/2021/08/Porsche-Logo-Font-1.jpg?resize=1000%2C566&ssl=1" alt="porche"><br><br>
+</div>
+<div class="five1">
+    <p style="margin-left: auto;"> Porsche was founded by Ferdinand Porsche in the year 1931 and the formation of this company was in Stuttgart. Subsequently the firm concentrated in manufacturing and designing automobile engines together with providing engineering as well as consulting services to automobile firms like Audi, Mercedes-Benz, Decavo Opel Wonder Daimler Benz Otto Union.</p>
+    <p>In one of the early years of the formation of Porsche Company, the company produced Volkswagen, or “car of the people”. It is on record that in the 1930s, the German government invited Ferdinand Porsche to design their first car which was initially called the VW Beetle.</p>
+</div>
+
+<ol type="I">
+    
+    <li>911 Turbo S </li>
+    <li>992 Carrera GTS</li>
+    <li>Panamera GTS</li>
+    <li>Cayenne GTS</li>
+    <li>718 Boxster</li>
+</ol>
+
+<ul type="circle">
+    <li>The First Porsche Was Technically an Electric Car</li>
+    <li>The 911 Was Almost Called the 901</li>
+    <li> Porsche Engines Have Powered Other Brands</li>
+    <li>Porsche Once Made Tractors</li>
+    <li>The Cayenne Saved the Brand</li>
+</ul>
+
+6.design a customer login page using css <br><br>
+
+<label for="custname">Customer Name:</label>
+<input type="text" name="custname" id="custname" style="background-color: aquamarine;"><br><br>
+<label for="id">Customer ID :</label>
+<input type="text" name="id" id="id" style="background-color: aquamarine;"><br><br>
+<label for="pwd">Password:</label>
+<input type="password" name="pwd" id="pwd" style="background-color: aquamarine;"><br><br>
+
+<button onclick="alert" style="height: 50px; width: 100px; background-color: coral; color: darkred;">login</button>
+
+
+
+
+
+</body>
+<style>
+    .four{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .four img{
+        width: 300px;
+        height: 300px;
+    }
+    .four1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .five{
+        display: flex;
+        justify-self: center;
+        align-items: center;
+    }
+    .five1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    
+
+</style>
+</html>
