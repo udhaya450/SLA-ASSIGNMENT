@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    //console.log("1. 1 2 3 4 5 6 7 8  series of 1 to 20");
+    // without parameter
+    // function series1(){
+    //     for(let i=1;i<=20;i++){
+
+    //     console.log(i);
+    //     }
+    // }
+    // series()
+   
+    //without parameter
+    // function series2(n){
+    //     let i=1;
+    //     while(i<=n){
+
+    //        console.log(i)
+    //        i++;
+    //     }
+    // }
+    // series2(10);
+
+
+    // function series3() {
+    //     let op="";
+    //     for(let i=1;i<=10;i++){
+    //         op+=i+" ";
+           
+    //     }
+    //      return op;
+    // }
+    // console.log(series3()) // return type
+
+
+    // 2.odd series
+    // let op="";
+    // function series1(){
+    //     for(i=1;i<=20;i=i+2){
+    //         op=op+ i+ " ";
+    //     }
+    //     console.log(op);
+    // }
+    // series1()  without paramater
+
+    // let i=1;
+    // let op="";
+    // function series2(n) {
+    //     while(i<=n){
+    //         op=op+ i + " ";
+    //         i+=2;
+    //     }
+    //     console.log(op);
+    // }
+    // series2(20) // with paramater
+
+    // function oddseries() {
+    //     let op="";
+    //     for(i=1;i<=20;i+=2){
+    //         op=op+i+ " ";
+    //     }
+    //     return op;
+    // }
+    // console.log(oddseries());
+
+    //3.even series
+
+    // function evenseries() {
+    //     let s1="";
+    //     for(i=2;i<=20;i+=2) {
+    //         s1=s1+i+" ";
+    //     }
+    //     console.log(s1);
+    // }
+    // evenseries() // withoutbprameter
+
+    // let i=2;
+    // let op="";
+    // function evenseries(n) {
+    //     while(i<=n){
+    //         op=op+ i + " ";
+    //         i+=2;
+    //     }
+    //     console.log(op); 
+    //  }
+    //  evenseries(20)  // with parameter
+
+    // function evenseries() {
+    //     let i=2;
+    //     let op="";
+    //     do{
+    //         op=op+ i + " "; 
+    //         i+=2;
+              
+    //     } 
+    //     while(i<=20);
+
+    //     return op;
+
+    // }
+    // console.log(evenseries())
+
+    // 4.  0 5 10 15 20 25(5 series)
+
+    //let op="";
+    // function fiveseries() {
+    //     let op="";
+    //     for(let i=0;i<=50;i+=5){
+    //         op=op+ i + " ";
+    //     }
+    //     console.log(op);
+    // }
+    // fiveseries()
+
+    // function fiveseries(n) {
+    //     let op="";
+    //     let i=0;
+        
+    //     while(i<=n){
+    //         op=op+i+" ";
+    //         i+=5;
+    //     } 
+    //     console.log(op);
+    // } 
+    // fiveseries(50); // with paramater
+
+    // function fiveseries(n) {
+    //     let op="";
+    //     let i=0;
+    //     do{
+    //         op=op+i+" ";
+    //         i+=5;
+    //     }while(i<n);
+        
+    //     return op;
+        
+    // }
+    // console.log(fiveseries(50))  //return type
+
+    
+    //5. 1 + 2 + 3 + 4 + ....
+    // function sum() {
+    //     let sum=0;
+    //     let op="";
+    //     for(i=1;i<=10;i++){
+    //         sum=sum+i;
+    //         if(i<=9){
+    //             sum=sum+" + ";
+    //         }
+    //     }
+    //     console.log(sum);
+    // }
+    // sum()    // with parameter
+
+    // function sum(n){
+    //     let sum=0;
+    //     let i=1;
+    //     while(i<=n){
+    //         sum=sum+i;
+
+    //         if(i<=n-1){
+    //             sum=sum+" + ";
+    //         }
+    //         i++;
+    //     }
+    //     console.log(sum);
+    // }
+    // sum(15);  // with paramater
+
+     
+    // // function sum(n) {
+    // //     let sum=0;
+    // //     let i=1;
+    // //     do{
+    // //         sum=sum+i;
+
+    //         if(i<=n-1){
+    //             sum=sum+" + ";
+
+    //         } 
+    //         i++;
+    //     }while(i<=n);
+
+    //     return sum;
+    // } //return sum;
+    // console.log(sum(20));  // return type
+
+    //6.0 + 2 + 4 + 6 + ..
+
+    // function sumeven() {
+    //     let sum=0;
+    //     let s="";
+    //     for(i=0;i<=20;i+=2){
+    //         sum=sum+i;
+    //         if(i<=18){
+    //             sum=sum+ " + ";
+    //         }
+        
+    //     }
+    //     console.log(sum);
+    // }
+    // sumeven();
+
+    // function sumeven(n) {
+    //     let sum=0;
+    //     let i=0;
+    //     while(i<=n) {
+    //         sum=sum+i;
+    //         i+=2;
+    //         if(i<=n){
+    //             sum=sum+" + ";
+    //         }
+    //     }
+    //     console.log(sum);
+
+    // }
+    // sumeven(30);  // with paramater
+
+    // function sumeven(n) {
+    //     let sum=0;
+    //     let i=0;
+    //     do{
+    //         sum=sum+i;
+    //         i+=2;
+    //         if(i<=n){
+    //             sum=sum+" + ";
+    //         }
+    //     } while(i<n);
+
+    //     return sum;
+    // }
+    // console.log(sumeven(25));
+
+    //7.1 + 3 + 5 + 7 + ..
+
+    // function sumodd() {
+    //     let sum=0;
+    //     let s="";
+    //     for(i=1;i<=20;i+=2){
+    //         sum=sum+i;
+    //         if(i<=18){
+    //             sum=sum+ " + ";
+    //         }
+        
+    //     }
+    //     console.log(sum);
+    // }
+    // sumodd();
+
+    // function sumodd(n) {
+    //     let sum=0;
+    //     let i=1;
+    //     while(i<=n) {
+    //         sum=sum+i;
+    //         i+=2;
+    //         if(i<=n){
+    //             sum=sum+" + ";
+    //         }
+    //     }
+    //     console.log(sum);
+
+    // }
+    // sumodd(25);  // with paramater
+
+    // function sumodd(n) {
+    //     let sum=0;
+    //     let i=1;
+    //     do{
+    //         sum=sum+i;
+    //         i+=2;
+    //         if(i<=n){
+    //             sum=sum+" + ";
+    //         }
+    //     } while(i<n);
+
+    //     return sum;
+    // }
+    // console.log(sumodd(10));
+
+
+    //8. 0+5+10+15+....
+    
+    // function fivesum() {
+    // let op="";
+    // for(let i=0;i<=50;i+=5)
+    // {
+    //     op=op+i;
+    //     if(i<=49){
+    //         op=op+ " + ";
+    //     }
+    
+    // }console.log(op);
+
+    // }   fivesum()  // without paramater
+
+
+
+    // function fivesum(n) {
+    // let op2="";
+    // let i=0;
+    // while(i<=n){
+    //     op2=op2+i;
+    //     if(i<=n-1){
+    //         op2=op2+" + ";
+    //     }
+    //     i+=5;
+    // }console.log(op2);
+
+    // } 
+    // fivesum(40);     // with pramaetr
+
+    // function fivesum(n) {
+    //     let op="";
+    //     let i=0;
+    //     do{
+    //         op=op+i;
+    //         if(i<=n-1){
+    //             op=op+" + ";
+    //         }
+    //         i+=5;
+    //     }
+    //     while(i<=n);
+    //     return op;
+    // }
+    // console.log(fivesum(40));  // RETURN TYPE
+
+    //9. 1 / 1! + 2 / 2! + 3 / 3! + 4 / 4!....
+    // function factsum() {
+    //     let op="";
+    //     for(let i=1;i<=10;i++) {
+    //         op=op+ `${i} / ${i}!`;
+    //         if(i<=9){
+    //             op=op+ " + ";
+    //         }
+    //     }
+    //     console.log(op);
+    // }
+    // factsum();       without paramter;
+
+
+    // function factsum(n) {
+    //     let op="";
+    //     let i=1;
+    //     while(i<=n){
+    //         op=op+`${i} / ${i}!`;
+            
+    //         if(i<=n-1){
+    //             op=op+ " + ";
+    //         }
+    //         i++;
+    //     }
+    //     console.log(op);
+    // }
+    // factsum(6);       with paramater
+
+
+    // function factsum(n) {
+    //     let op="";
+    //     let i=1;
+    //     do{
+    //         op=op+`${i} / ${i}!`;
+    //         if(i<=n-1) {
+    //             op=op+" + ";
+    //         }
+    //         i++;
+        
+    //     }while(i<=n)
+    //     return op;
+    // }
+    // console.log(factsum(8));   return type
+
+    //  10.0 + 2 / 2! + 4 / 4! + 6 / 6!..
+
+    // function sum() {
+    //     let op="";
+    //     for(i=0;i<=10;i+=2) {
+    //         op=op+`${i} / ${i}!`;
+    //         if(i<=9){
+    //             op=op+" + ";
+    //         }
+    //     }
+    //     console.log(op)
+    // }
+    // sum();     witout paramater
+
+    // function sum(n) {
+    //     let op="";
+    //     let i=0;
+    //     while(i<=n){
+    //         op=op+`${i} / ${i}!`;
+    //         if(i<=n-1){
+    //             op=op+" + "
+    //         }
+    //         i+=2;
+    //     }
+    //     console.log(op);
+    // }
+    // sum(14);    with paramater;
+
+
+    // function sum(n) {
+    //     let op="";
+    //     let i=0;
+    //     do{
+    //         op=op+`${i} / ${i}!`;
+    //         if(i<=n-1){
+    //             op=op+" + ";
+    //         }
+    //         i+=2;
+    //     }while(i<=n)
+    //     return op;
+    // }
+    // console.log(sum(20));    retrun type
+
+
+    //11. 1 / 1! + 3 / 3! + 5 / 5!..
+    // function sum() {
+    //     let op="";
+    //     for(i=1;i<=11;i+=2) {
+    //         op=op+`${i} / ${i}!`;
+    //         if(i<=10){
+    //             op=op+" + ";
+    //         }
+    //     }
+    //     console.log(op)
+    // }
+    // sum();     //witout paramater
+
+
+    // function sum(n) {
+    //     let op="";
+    //     let i=1;
+    //     while(i<=n){
+    //         op=op+`${i} / ${i}!`;
+    //         if(i<=n-1){
+    //             op=op+" + "
+    //         }
+    //         i+=2;
+    //     }
+    //     console.log(op);
+    // }
+    // sum(15);    //with paramater;
+
+
+    // function sum(n) {
+    //     let op="";
+    //     let i=1;
+    //     do{
+    //         op=op+`${i} / ${i}!`;
+    //         if(i<=n-1){
+    //             op=op+" + ";
+    //         }
+    //         i+=2;
+    //     }while(i<=n)
+    //     return op;
+    // }
+    // console.log(sum(19));  return type
+
+
+    // 12.factorial
+
+    // function fact() {
+    // let fact1=1;
+    // let val1="";
+    // for(let i=1;i<=5;i++)
+    // {
+    //     fact1=fact1*i;
+    //     if(i<=5){
+    //         val1=fact1+" ";
+    //     }
+
+    // }console.log(val1);
+
+    // }    fact();
+
+//     function fact(n){
+//     let fact2=1;
+//     let i2=1;
+//     let val2="";
+//     while(i2<=n){
+//         fact2=fact2*i2;
+//         val2=fact2;
+//         i2++;
+//     }
+//     console.log(fact2);
+
+// }    fact(7);    with paramater
+
+
+// function fact(n) {
+
+// let fact3=1;
+//  let i3=1;
+//  do{
+//      fact3=fact3*i3;
+//      i3++;
+//  }while(i3<=n)
+ 
+//  return fact3;
+
+ 
+// }
+// console.log(fact(8));  return type
+
+//13.prime number
+// function prime() {
+
+
+//     num1=Number(prompt("enter a number:"));
+//     count1=0;
+//     for(i1=1;i1<=num1;i1++){
+//         if(num1%i1==0){
+//             count1++;
+//         }
+//     }
+//     if(count1==2){
+//         console.log("given number is prime number");
+//     }
+//     else{
+//         console.log("given number is not an prime number");
+//     }
+
+// }
+// prime();   without paramater
+
+ 
+//function prime(n) {
+
+
+//     let count2=0;
+    
+//     let i2=1;
+//     while(i2<=n){
+//        if(n%i2==0){
+//             count2++;
+//         }
+//         i2++;
+//     }
+//     if(count2==2){
+//     console.log("prime number");
+//    }
+//    else{
+//     console.log("not prime number");
+//    }
+
+// }
+// prime(71);    with parmeter
+
+
+// function prime(num) {
+// let count3=0;
+// let i3=1;
+
+// do{
+//     if(num%i3==0)
+// {
+//     count3++;
+// }   i3++;
+// }while(i3<=num);
+// if(count3==2)
+// {
+//     return " prime number";
+// }
+// else{
+//     return "not prime number";
+// }
+// }
+// console.log(prime(3));    return type
+
+
+//14."print the prime no series"
+// function prime() {
+// let op="";
+// //let count=0;
+// for(let n=2;n<=100;n++){
+//     let count=0;
+//     for(let i=1;i<=n;i++){
+//         if(n%i==0){
+//             count++;
+//         }
+       
+//     }
+//      if(count==2){
+//             op=op+n+" ";
+//         }
+// } 
+// console.log(op);
+// }
+// prime();    without paramater;
+
+// function prime(no) {
+//     let op="";
+//     let n=2;
+//     while(n<=no){
+//         let i=1;
+//         let count=0;
+//         while(i<=n){
+//             if(n%i==0){
+//                 count++;
+//             }
+//             i++;
+//         }
+        
+//         if(count==2){
+//         op=op+n+" ";
+
+//         }
+//         n++;
+//     } 
+//     console.log(op);
+// }
+// prime(200);      with parameter;
+
+// function prime() {
+//     let op="";
+//     let n=2;
+//     do {
+//         let count=0;
+//         let i=1;
+//         do {
+//             if(n%i==0){
+//                 count++;
+//             }
+//             i++;
+//         } while(i<=n);
+
+//         if(count==2){
+//             op=op+n+" ";
+//         }
+//         n++;
+//     } while(n<=300);
+
+//     return op;
+// } 
+// console.log(prime());   return type
+
+//15.find out the given no is Armstrong no or not (153= 1 ^ 3 + 5 ^ 3 + 3 ^ 3 = 153")
+
+// function armstrong() {
+//     let num=prompt("enter a number");
+//     let sum=0;
+//     for(let temp=num;temp>0;temp=parseInt(temp / 10)){
+//         let rem=parseInt(temp%10);
+//         sum= sum+(rem*rem*rem);
+
+//     }
+//     if(sum==num){
+//     console.log("given number is armstrong number");
+//     }
+//     else{
+//     console.log("given numbers is not armstrong number");
+//     }
+// }
+// armstrong() ;    without paramater
+
+
+// function armstrong(num) {
+
+// //let num=prompt("enter a number");
+//     let temp=num;
+//     let sum=0;
+//     while(temp!=0){
+//         let rem=parseInt(temp%10);
+//         sum=sum+(rem*rem*rem);
+//         temp=parseInt(temp/10);
+//     }
+//     if(sum==num){
+//         console.log("given number is armstrong number");
+//     }
+//     else{
+//         console.log("given number is not armstrong number");
+//     }
+
+// }
+// armstrong(253);     with parameter
+
+// function armstrong () {
+//     let num=prompt("enter a number");
+//     let temp=num;
+//     let sum=0;
+//     do{
+//         let rem=parseInt(temp%10);
+//         sum=sum+(rem*rem*rem);
+//         temp=parseInt(temp / 10);
+//     }while(temp!=0);
+
+//     if(sum==num){
+//         return " given number is armstrong";
+//     }
+//     else{
+//         console.log(num + " is not armstrong number");
+//     }
+
+// }      return type
+
+
+//16.print the Armstrong no series
+// function armstrongseries() {
+//     let s="";
+//     for(let num=2;num<=1000;num++) {
+//         let sum=0;
+//         let temp=num;
+
+//         while(temp!=0){
+//             let rem=parseInt(temp%10);
+//             sum=sum+(rem*rem*rem);
+//             temp=parseInt(temp/10);
+//         }
+
+//         if(sum==num){
+//             s+=num+" ";
+//         }
+
+//     }
+//     console.log(s);
+// }
+// armstrongseries();   // without parmater
+
+
+// function armstrongseries(num) {
+//     let s="";
+//     for(let i=1000;i<=num;i++) {
+//         let sum=0;
+//         let temp=i;
+
+//         while(temp!=0){
+//             let rem=parseInt(temp%10);
+//             sum=sum+(rem*rem*rem*rem);
+//             temp=parseInt(temp/10);
+//         }
+
+//         if(sum==i){
+//             s+=i+" ";
+//         }
+
+//     }
+//     console.log(s);
+// }
+// armstrongseries(10000);   // with parmater
+
+
+// function armstrongseries() {
+//     let s="";
+//     for(let num=2;num<=1000;num++) {
+//         let sum=0;
+//         let temp=num;
+
+//         while(temp!=0){
+//             let rem=parseInt(temp%10);
+//             sum=sum+(rem*rem*rem);
+//             temp=parseInt(temp/10);
+//         }
+
+//         if(sum==num){
+//             s+=num+" ";
+//         }
+
+//     }
+//     return s;
+// }
+// console.log(armstrongseries());   // return type
+
+
+// 17.Fibnacie Series(0 1 1 2 3 5 8 13..)
+
+// function fibonacci() {
+//     let s="";
+//     let a=0;
+//     let b=1;
+//     for(i=1;i<=10;i++){
+//         s=s+a+" ";
+//         let c=a+b;
+//         a=b;
+//         b=c;
+//     }
+//     console.log(s);
+// }
+// fibonacci();   // without parameter
+
+// function fibonacci(n) {
+//     let s="";
+//     let a=0;
+//     let b=1;
+//     for(i=1;i<=n;i++){
+//         s=s+a+" ";
+//         let c=a+b;
+//         a=b;
+//         b=c;
+//     }
+//     console.log(s);
+// }
+// fibonacci(15);     with parameter;
+
+// function fibonacci(n) {
+//     let s="";
+//     let a=0;
+//     let b=1;
+//     for(i=1;i<=n;i++){
+//         s=s+a+" ";
+//         let c=a+b;
+//         a=b;
+//         b=c;
+//     }
+//     return s;
+// }
+// console.log(fibonacci(20));
+
+
+// 18.print the table
+
+// function table() {
+//     let num=prompt("enter a number");
+//     for(i=1;i<=10;i++){
+//         console.log(`${i} * ${num} = ${i*num}`);
+//     }
+// }
+// table();
+
+// function table(n) {
+//     //let num=prompt("enter a number");
+//     let i=1;
+    
+//     while(i<=10){
+//         console.log(`${i} * ${n} = ${i*n}`);
+//         i++;
+//     }
+    
+
+// }
+// table(8);
+
+
+// 19.sum of digits
+// function sum() {
+//     let num=prompt("enter a number");
+//     let sum=0;
+//     while(num!=0){
+//         let rem=parseInt(num%10);
+//         sum+=rem;
+//         num=parseInt(num/10);
+//     }
+//     console.log(sum);
+// }
+// sum();       without parameter;
+
+
+// function sum(num) {
+    
+//     let sum=0;
+//     while(num!=0){
+//         let rem=parseInt(num%10);
+//         sum+=rem;
+//         num=parseInt(num/10);
+//     }
+//     console.log(sum);
+// }
+// sum(911);       //with parameter;
+
+
+// function sum() {
+//     let num=prompt("enter a number");
+//     let sum=0;
+//     while(num!=0){
+//         let rem=parseInt(num%10);
+//         sum+=rem;
+//         num=parseInt(num/10);
+//     }
+//     return sum ;
+// }
+// console.log(sum());     return type
+
+// 20.palindrome
+
+// function palindrome() {
+//     let str=prompt("enter a string");
+//     let op="";
+//     for(i=str.lenth-1;i>=0;i--){
+//         op=op+str[i];
+
+//     }
+//     if(op==str){
+//         console.log("${str} is an palindrome");
+//     }
+//     else{
+//         console.log("given string is not an palindrome");
+//     }
+// }
+// palindrome();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+ 
+        
+    </script>
+    
+</body>
+</html>
