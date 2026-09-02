@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Form</title>
+
+    <style>
+
+        .container{
+            width:700px;
+            margin:30px auto;
+            background:white;
+            padding:20px;
+            border-radius:10px;
+            box-shadow:0 0 10px gray;
+        }
+
+        h2{
+            text-align:center;
+        }
+
+        label{
+            font-weight:bold;
+        }
+
+        input[type=text],
+        input[type=email],
+        input[type=number],
+        textarea{
+            width:100%;
+            padding:8px;
+            margin-top:5px;
+            margin-bottom:15px;
+        }
+
+        .section{
+            margin-bottom:20px;
+        }
+
+        button{
+            padding:10px 20px;
+            font-size:16px;
+            background:green;
+            color:white;
+            border:none;
+            cursor:pointer;
+        }
+
+        button:hover{
+            background:darkblue;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Customer Feedback Form</h2>
+
+<form id="feedbackForm">
+
+<div class="section">
+<label>1. Full Name</label>
+<input type="text" id="name">
+</div>
+
+<div class="section">
+<label>2. Email Address</label>
+<input type="email" id="email">
+</div>
+
+<div class="section">
+<label>3. Reason for Visit / Purchase</label><br>
+
+<input type="radio" name="reason" value="Product Purchase"> Product Purchase<br>
+
+<input type="radio" name="reason" value="Customer Support"> Customer Support<br>
+
+<input type="radio" name="reason" value="Browsing / Research"> Browsing / Research<br>
+
+<input type="radio" name="reason" value="Other"> Other
+</div>
+
+<div class="section">
+<label>4. Overall Satisfaction</label><br>
+
+<input type="radio" name="satisfaction" value="1">1 - Very Dissatisfied<br>
+
+<input type="radio" name="satisfaction" value="2">2 - Dissatisfied<br>
+
+<input type="radio" name="satisfaction" value="3">3 - Neutral<br>
+
+<input type="radio" name="satisfaction" value="4">4 - Satisfied<br>
+
+<input type="radio" name="satisfaction" value="5">5 - Very Satisfied
+</div>
+
+<div class="section">
+<label>5. Ease of Use / Navigation</label><br>
+
+<input type="radio" name="nav" value="Very Easy"> Very Easy<br>
+
+<input type="radio" name="nav" value="Easy"> Easy<br>
+
+<input type="radio" name="nav" value="Neutral"> Neutral<br>
+
+<input type="radio" name="nav" value="Difficult"> Difficult<br>
+
+<input type="radio" name="nav" value="Very Difficult"> Very Difficult
+</div>
+
+<div class="section">
+<label>6. Product / Service Quality</label><br>
+
+<input type="radio" name="quality" value="Excellent"> Excellent<br>
+
+<input type="radio" name="quality" value="Good"> Good<br>
+
+<input type="radio" name="quality" value="Average"> Average<br>
+
+<input type="radio" name="quality" value="Poor"> Poor<br>
+
+<input type="radio" name="quality" value="Very Poor"> Very Poor
+</div>
+
+<div class="section">
+<label>7. Staff / Customer Support Helpfulness</label><br>
+
+<input type="radio" name="support" value="N/A"> N/A - No interaction<br>
+
+<input type="radio" name="support" value="Extremely Helpful"> Extremely Helpful<br>
+
+<input type="radio" name="support" value="Somewhat Helpful"> Somewhat Helpful<br>
+
+<input type="radio" name="support" value="Unhelpful"> Unhelpful
+</div>
+
+<div class="section">
+<label>8. Recommendation Score (0-10)</label>
+
+<input type="number" id="score" min="0" max="10">
+</div>
+
+<div class="section">
+<label>9. What can we improve?</label><br>
+
+<input type="checkbox" name="improve" value="Product Selection"> Product Selection<br>
+
+<input type="checkbox" name="improve" value="Pricing"> Pricing<br>
+
+<input type="checkbox" name="improve" value="Website / App"> Website / App<br>
+
+<input type="checkbox" name="improve" value="Delivery / Service Speed"> Delivery / Service Speed<br>
+
+<input type="checkbox" name="improve" value="Customer Support"> Customer Support
+</div>
+
+<div class="section">
+<label>10. Additional Comments</label>
+
+<textarea id="comments" rows="5"></textarea>
+</div>
+
+<button type="submit">Submit</button>
+
+</form>
+
+</div>
+
+<script>
+
+window.onload=function(){
+
+document.getElementById("name").value=
+localStorage.getItem("name") || "";
+
+document.getElementById("email").value=
+localStorage.getItem("email") || "";
+
+document.getElementById("score").value=
+sessionStorage.getItem("score") || "";
+
+document.getElementById("comments").value=
+sessionStorage.getItem("comments") || "";
+
+restoreRadio("reason");
+restoreRadio("satisfaction");
+restoreRadio("nav");
+restoreRadio("quality");
+restoreRadio("support");
+restoreCheckboxes();
+
+};
+
+document.getElementById("feedbackForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+localStorage.setItem("name",
+document.getElementById("name").value);
+
+localStorage.setItem("email",
+document.getElementById("email").value);
+
+saveRadio("reason");
+saveRadio("satisfaction");
+saveRadio("nav");
+saveRadio("quality");
+saveRadio("support");
+
+sessionStorage.setItem("score",
+document.getElementById("score").value);
+
+sessionStorage.setItem("comments",
+document.getElementById("comments").value);
+
+saveCheckboxes();
+
+alert("Feedback Saved Successfully!");
+
+});
+
+function saveRadio(name){
+
+let radio=document.querySelector(
+'input[name="'+name+'"]:checked');
+
+if(radio){
+sessionStorage.setItem(name,radio.value);
+}
+
+}
+
+function restoreRadio(name){
+
+let value=sessionStorage.getItem(name);
+
+if(value){
+
+let radio=document.querySelector(
+'input[name="'+name+'"][value="'+value+'"]');
+
+if(radio){
+radio.checked=true;
+}
+
+}
+
+}
+
+function saveCheckboxes(){
+
+let checked=[];
+
+document.querySelectorAll(
+'input[name="improve"]:checked'
+).forEach(function(item){
+
+checked.push(item.value);
+
+});
+
+sessionStorage.setItem(
+"improve",
+JSON.stringify(checked)
+);
+
+}
+
+function restoreCheckboxes(){
+
+let checked=JSON.parse(
+sessionStorage.getItem("improve")
+)||[];
+
+document.querySelectorAll(
+'input[name="improve"]'
+).forEach(function(item){
+
+if(checked.includes(item.value)){
+item.checked=true;
+}
+
+});
+
+}
+
+</script>
+
+</body>
+</html>

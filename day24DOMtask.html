@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<!--1.Create a webpage with a heading and a button. When the button is clicked, change the heading text using getElementById().-->
+<h1 id="heading">Welcome</h1>
+
+<button onclick="changeText()">Click Me</button>
+
+<script>
+function changeText()
+{
+    document.getElementById("heading").innerHTML = "Hello JavaScript!";
+} 
+</script>
+   <!--2.Create a paragraph and a button. When the button is clicked, change the paragraph's text colour to blue and increase its font size using getElementById().
+// Using getElementsByTagName()-->
+
+
+
+<p id="para">This is a paragraph.</p>
+
+<button onclick="changeStyle()">Change Style</button>
+
+<script>
+function changeStyle()
+{
+    let p = document.getElementById("para");
+
+    p.style.color = "blue";
+    p.style.fontSize = "25px";
+} 
+</script>
+<!--create four paragraph elements. Write JavaScript to change the text colour of all paragraphs to green using getElementsByTagName().-->
+
+
+<p>Paragraph 1</p>
+<p>Paragraph 2</p>
+<p>Paragraph 3</p>
+<p>Paragraph 4</p>
+
+<button onclick="changeColor()">Change Color</button>
+
+<script>
+function changeColor()
+{
+    let p = document.getElementsByTagName("p");
+
+    for(let i=0;i<p.length;i++)
+    {
+        p[i].style.color="green";
+    }
+}
+</script>
+
+<!--4.Create a webpage with five <li> elements inside a <ul>. Use getElementsByTagName() to count the total number of list items and display the count.-->
+   
+    
+    <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Orange</li>
+        <li>Banana</li>
+        <li>Grapes</li>
+    </ul>
+    
+    <button onclick="countItems()">Count Items</button>
+    
+    <p id="result"></p>
+    
+    <script>
+    function countItems()
+    {
+        let items = document.getElementsByTagName("li");
+    
+        document.getElementById("result").innerHTML =
+        "Total Items = " + items.length;
+    }
+    </script>
+    
+<!--5.using getElementsByClassName() Create three paragraphs with the same class name. Change the background colour of all paragraphs using getElementsByClassName().-->
+
+
+<p class="text">Paragraph 1</p>
+<p class="text">Paragraph 2</p>
+<p class="text">Paragraph 3</p>
+
+<button onclick="changeBackground()">Change Background</button>
+
+<script>
+function changeBackground()
+{
+    let p = document.getElementsByClassName("text");
+
+    for(let i=0;i<p.length;i++)
+    {
+        p[i].style.backgroundColor="yellow";
+    }
+}
+</script>
+
+<!--6.Create four buttons with the same class name. Use getElementsByClassName() to disable all the buttons when another button is clicked.-->
+
+
+
+<button class="btn">Button 1</button>
+<button class="btn">Button 2</button>
+<button class="btn">Button 3</button>
+<button class="btn">Button 4</button>
+
+<br><br>
+
+<button onclick="disableButtons()">Disable All</button>
+
+<script>
+function disableButtons()
+{
+    let buttons = document.getElementsByClassName("btn");
+
+    for(let i=0;i<buttons.length;i++)
+    {
+        buttons[i].disabled = true;
+    }
+}
+</script>
+
+<!--Using CSS Selectors (querySelector() and querySelectorAll())
+7.Create a heading with an ID and change its text using querySelector() when a button is clicked.-->
+
+
+
+<h1 id="title">Welcome</h1>
+
+<button onclick="changeHeading()">Click Here</button>
+
+<script>
+function changeHeading()
+{
+    document.querySelector("#title").innerHTML =
+    "Welcome to DOM!";
+}
+</script>
+
+<!--8.Create five elements with the same class name. Use querySelectorAll() to change the text colour and font style of all selected elements.-->
+
+
+
+
+<p class="demo">Paragraph 1</p>
+<p class="demo">Paragraph 2</p>
+<p class="demo">Paragraph 3</p>
+<p class="demo">Paragraph 4</p>
+<p class="demo">Paragraph 5</p>
+
+<button onclick="changeStyle()">Change Style</button>
+
+<script>
+function changeStyle()
+{
+    let items = document.querySelectorAll(".demo");
+
+    items.forEach(function(item)
+    {
+        item.style.color = "red";
+        item.style.fontStyle = "italic";
+    });
+}
+</script>
+</body>
+</html> 

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //1.Find the Sum , Average of Array Elements
+    //     let arr=[1,2,3,4,5];
+    //     let sum=0;
+    //     for(let i=0;i<arr.length;i++)
+    //    {
+    //         sum=sum+arr[i];
+    //    }
+    //    console.log(sum);
+
+    //    let avg=sum/arr.length;
+    //    console.log(avg);
+
+    //2.Find the Largest Element of array elements.
+    // let n=parseInt(prompt("Enter Size of Array"));
+    // let arr=[];
+    // for(let i=0;i<n;i++)
+    // {
+    //     arr[i]=parseInt(prompt("Enter values"));
+    // }
+    // let max=arr[0];
+    // for(let i=0;i<arr.length;i++)
+    // {
+    //     if(max<arr[i])
+    // {
+    //     max=arr[i];
+    // }
+    // }
+    // console.log(max);
+
+//     //3..Find the smallest Element of array elements.
+//     let n=parseInt(prompt("Enter Size of Array"));
+//     let arr=[];
+//     for(let i=0;i<n;i++)
+//     {
+//         arr[i]=parseInt(prompt("Enter values"));
+//     }
+//     let min=arr[0];
+//     for(let i=0;i<arr.length;i++)
+//     {
+//         if(min>arr[i])
+//     {
+//         min=arr[i];
+//     }
+//     }
+//     console.log(min);
+
+//     //4.Count positive and negative numbers.
+//      let n=parseInt(prompt("Enter Size of Array"));
+//     let arr=[];
+//     for(let i=0;i<n;i++)
+//     {
+//         arr[i]=parseInt(prompt("Enter values"));
+//     }
+//     let positive=0;
+//     let negative=0;
+//     for(let i=0;i<arr.length;i++)
+//     {
+//         if(arr[i]<0)
+//     {
+//         negative++;
+//     }
+//     else
+//     {
+//         positive++;
+//     }
+//     }
+//     console.log(` Positive Count: ${positive} Negative Count: ${negative}`);
+
+//     //5.Print duplicate elements.
+    
+//     let n=parseInt(prompt("Enter Size of Array"));
+//     let arr=[];
+//     for(let i=0;i<n;i++)
+//     {
+//         arr[i]=parseInt(prompt("Enter values"));
+//     }
+
+//     for(let i=0;i<n;i++)
+//     {
+//         for(let j=i+1;j<n;j++)
+//     {
+//         if(arr[i]==arr[j])
+//     {
+//         console.log(arr[i]);
+//         break;
+//     }
+//     }
+//     }
+   
+//     //6.Search an Element
+//        let n=parseInt(prompt("Enter Size of Array"));
+//     let arr=[];
+//     for(let i=0;i<n;i++)
+//     {
+//         arr[i]=parseInt(prompt("Enter values"));
+//     }
+//     let search = parseInt(prompt("Enter element to search"));
+
+//     let found = false;
+
+//     for (let i = 0; i < n; i++) {
+//     if (arr[i] === search) {
+//         console.log("Element found at index:", i);
+//         found = true;
+//         break;
+//     }
+//     }
+
+//     if (!found) {
+//     console.log("Element not found");
+//     }
+
+//     //7.Find the frequency of each element.
+//     let n = parseInt(prompt("Enter size of array"));
+//     let arr = [];
+
+//     for (let i = 0; i < n; i++) {
+//     arr[i] = parseInt(prompt("Enter value"));
+//     }
+
+//    for (let i = 0; i < n; i++) {
+//     let count = 1;
+//     let visited = false;
+//     for (let k = 0; k < i; k++) {
+//         if (arr[i] === arr[k]) {
+//             visited = true;
+//             break;
+//         }
+//     }
+//     if (visited) {
+//         continue;
+//     }
+//     for (let j = i + 1; j < n; j++) {
+//         if (arr[i] === arr[j]) {
+//             count++;
+//         }
+//     }
+
+//     console.log(arr[i] + " occurs " + count + " time(s)");
+// }
+// //8.Check if an array is sorted
+// let n = parseInt(prompt("Enter size of array"));
+// let arr = [];
+
+// for (let i = 0; i < n; i++) {
+//     arr[i] = parseInt(prompt("Enter value"));
+// }
+
+// let sorted = true;
+
+// for (let i = 0; i < n - 1; i++) {
+//     if (arr[i] > arr[i + 1]) {
+//         sorted = false;
+//         break;
+//     }
+// }
+
+// if (sorted) {
+//     console.log("Array is sorted.");
+// } else {
+//     console.log("Array is not sorted.");
+// }
+
+// //9.Find the missing number in an array (1 to n).
+
+// let n = parseInt(prompt("Enter the value of n"));
+// let arr = [];
+// console.log("Enter " + (n - 1) + " elements:");
+// for (let i = 0; i < n - 1; i++) {
+//     arr[i] = parseInt(prompt("Enter value"));
+// }
+// let expectedSum = (n * (n + 1)) / 2;
+// let actualSum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//     actualSum += arr[i];
+// }
+// let missing = expectedSum - actualSum;
+// console.log("Missing number is:", missing);
+
+// //10.Separate even and odd numbers into two arrays.
+
+let n = parseInt(prompt("Enter size of array"));
+let arr = [];
+
+for (let i = 0; i < n; i++) {
+    arr[i] = parseInt(prompt("Enter value"));
+}
+
+let even = [];
+let odd = [];
+
+for (let i = 0; i < n; i++) {
+    if (arr[i] % 2 === 0) {
+        even.push(arr[i]);
+    } else {
+        odd.push(arr[i]);
+    }
+}
+
+console.log("Original Array:", arr);
+console.log("Even Array:", even);
+console.log("Odd Array:", odd);
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- 1. Button Click
+    Create a button. When the user clicks it, display "Hello, World!".-->
+    <!-- <button onclick="showMessage()">Click</button>
+    <p id="message"></p>
+
+   <script>
+    function showMessage() {
+    document.getElementById("message").innerText = "Hello, World!";
+   }  </script>  -->
+
+   <!--2. Change Text Color Create a button that changes the color of a paragraph when clicked.-->
+   <!-- <p id="text">This is a paragraph.</p>
+
+   <button onclick="changeColor()">Change Color</button>
+
+   <script>
+   function changeColor() {
+    document.getElementById("text").style.color = "red";
+   }
+   </script> -->
+
+   <!-- 3.Show Input Value Create a text box and a button. Display the entered text when the button is clicked.
+   <input type="text" id="name" placeholder="Enter your name">
+
+   <button onclick="showName()">Submit</button>
+
+   <p id="result"></p>
+
+   <script>
+   function showName() {
+    let value = document.getElementById("name").value;
+
+    document.getElementById("result").innerText = value;
+    }
+
+   </script> -->
+
+    <!-- 4. Count Clicks. Create a button that counts how many times it has been clicked.
+
+   <button onclick="countClick()">Click Me</button>
+
+    <p id="count">Clicks: 0</p>
+
+    <script>
+    let count = 0;
+
+    function countClick() {
+        count++;
+
+        document.getElementById("count").innerText = "Clicks: " + count;
+    } 
+    </script> -->
+
+    <!-- 5. Mouse Hover Create a `<div>`. Change its background color when the mouse moves over it.
+
+    <div id="box"
+        onmouseover="changeColor()"
+        onmouseout="resetColor()"
+        style="width:200px; height:100px; background-color:lightblue;">
+    </div>
+
+    <script>
+        function changeColor() {
+        document.getElementById("box").style.backgroundColor = "yellow";
+    }
+
+    function resetColor() {
+        document.getElementById("box").style.backgroundColor = "lightblue";
+    }
+    </script> -->
+
+    <!-- 6. Double-Click Event Create a button that displays an alert message when double-clicked.
+
+    <button ondblclick="showAlert()">Double Click Me</button>
+
+    <script>
+    function showAlert() {
+    alert("Button was double-clicked!");
+    }
+    </script> -->
+
+    <!-- 7. Keyboard Event Create an input box and display the key pressed by the user.
+
+    <input type="text" id="input" onkeydown="showKey(event)">
+
+    <p id="result"></p>
+
+    <script>
+    function showKey(event) {
+    document.getElementById("result").innerText =
+        "You pressed: " + event.key;
+    }
+    </script> -->
+
+    <!-- 8. Hide and Show Text Create a button that hides a paragraph when clicked and shows it when clicked again.
+
+    <p id="text">This is text</p>
+
+    <button onclick="hideShow()">Hide / Show</button>
+
+    <script>
+        function hideShow() {
+
+        let text = document.getElementById("text");
+
+        if (text.style.display === "none") {
+            text.style.display = "block";
+        } else {
+        text.style.display = "none";
+        }
+    }
+    </script> -->
+
+    <!-- 9. Change Image Create a button that changes an image when clicked.
+
+    <img id="image"
+        src="133910194102158178.jpg"
+        width="200">
+    <br><br>
+    <button onclick="changeImage()">Change Image</button>
+    <script>
+    function changeImage() {
+        document.getElementById("image").src = "133910194102158178.jpg";
+    } -->
+
+    <!-- 10. Focus and Blur Create an input field. Change its border color when it gains focus and reset it when it loses focus.
+
+
+    <input type="text"
+       id="input"
+       onfocus="focusInput()"
+       onblur="blurInput()">
+
+    <script>
+    function focusInput() {
+        document.getElementById("input").style.borderColor = "blue";
+    }
+
+    function blurInput() {
+        document.getElementById("input").style.borderColor = "black";
+    } 
+    </script> -->
+</body>
+</html>
+
+
