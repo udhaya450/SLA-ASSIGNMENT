@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //6. Create a `Car` class with properties `brand`, `model`, and `year`. Add a method to display the car details.
+        class Car
+        {
+            constructor(brand,model,year)
+            {
+                this.brand=brand;
+                this.model=model;
+                this.year=year;
+            }
+            display()
+            {
+                console.log(this.brand);
+                console.log(this.model);
+                console.log(this.year)
+            }
+        }
+        let car=new Car("BMW","M5",2023);
+        car.display();
+
+        //7. Create a `Person` class and inherit an `Employee` class from it. Display the details of both classes.
+
+        class Person {
+        constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    display() {
+        console.log("Name:", this.name);
+        console.log("Age:", this.age);
+    }
+}
+
+class Employee extends Person {
+    constructor(name, age, employeeId, salary) {
+        super(name, age);
+        this.employeeId = employeeId;
+        this.salary = salary;
+    }
+
+    display1() {
+        console.log("Employee ID:", this.employeeId);
+        console.log("Salary:", this.salary);
+    }
+}
+
+let employee = new Employee("udhaya", 21, 101, 25000);
+
+employee.display();
+employee.display1();
+
+//8. Create an `Animal` class with a method `sound()`. Create `Dog` and `Cat` classes that override the `sound()` method.
+
+class Animal {
+    sound() {
+        console.log("Animal makes a sound");
+    }
+}
+class Dog extends Animal {
+    sound() {
+        console.log("Dog barks");
+    }
+}
+class Cat extends Animal {
+    sound() {
+        console.log("Cat meows");
+    }
+}
+let dog = new Dog();
+let cat = new Cat();
+dog.sound();
+cat.sound();
+
+
+//9. Create a `Book` class with properties `title`, `author`, and `price`. Add a method to display the book information.
+
+class Book {
+    constructor(title, author, price) {
+        this.title = title;
+        this.author = author;
+        this.price = price;
+    }
+    displayBook() {
+        console.log("Title:", this.title);
+        console.log("Author:", this.author);
+        console.log("Price:", this.price);
+    }
+}
+let book = new Book(
+    "The Wings",
+    "Kalam",
+    450
+);
+book.displayBook();
+
+//10. Create a `Calculator` class with methods for addition, subtraction, multiplication, and division. Create an object and perform all operations.
+
+class Calculator {
+
+addition(a, b) {
+    return a + b;
+}
+
+subtraction(a, b) {
+    return a - b;
+}
+
+multiplication(a, b) {
+    return a * b;
+}
+
+division(a, b) {
+    return a / b;
+}
+}
+
+let calculator = new Calculator();
+
+console.log("Addition:", calculator.addition(20, 10));
+console.log("Subtraction:", calculator.subtraction(20, 10));
+console.log("Multiplication:", calculator.multiplication(20, 10));
+console.log("Division:", calculator.division(20, 10));
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       // 1. Create a `Student` class with properties `name`, `age`, and `course`. Create an object and display the details.
+       class Student{
+           constructor(name,age,course){
+               this.name=name;
+               this.age=age;
+               this.course=course;
+           }
+       }
+       let obj=new Student("udhaya",21,"JavaScript");
+       console.log(obj.name);
+       console.log(obj.age);
+       console.log(obj.course);
+    
+    //2. Create an `Employee` class with properties `id`, `name`, and `salary`. Add a method to display the employee details.
+
+    class Employee{
+        constructor(id,name,salary)
+        {
+            this.id=id;
+            this.name=name;
+            this.salary=salary;
+        }
+    }
+    let emp=new Employee(1,"john",23000);
+    console.log(emp.id+ " "+emp.name+" "+emp.salary);
+
+    //3. Create a `Rectangle` class with properties `length` and `width`. Add a method to calculate the area of the rectangle.
+
+    class Rectangle {
+    constructor(length, width) {
+        this.length = length;
+        this.width = width;
+    }
+
+    Area() {
+        return this.length * this.width;
+    }
+}
+let rectangle = new Rectangle(10, 5);
+console.log( rectangle.length);
+console.log( rectangle.width);
+console.log( rectangle.Area());
+
+//4. Create a `Circle` class with a property `radius`. Add a method to calculate the circumference of the circle.
+class Circle {
+    constructor(radius) {
+        this.radius = radius;
+    }
+
+    Circumference() {
+        return 2 * Math.PI * this.radius;
+    }
+}
+let circle = new Circle(7);
+console.log(circle.radius);
+console.log(circle.Circumference());
+
+//5. Create a `BankAccount` class with properties `accountNumber` and `balance`. Add methods for deposit and withdrawal.
+class BankAccount {
+    constructor(accountNumber, balance) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+    }
+
+    deposit(amount) {
+        this.balance += amount;
+        console.log("Deposited:", amount);
+        console.log("Balance:", this.balance);
+    }
+
+    withdrawal(amount) {
+        if (amount <= this.balance) {
+            this.balance -= amount;
+            console.log("Withdrawn:", amount);
+            console.log("Balance:", this.balance);
+        } else {
+            console.log("Insufficient balance");
+        }
+    }
+}
+
+let account = new BankAccount("123456789", 5000);
+console.log("Account Number:", account.accountNumber);
+console.log("Initial Balance:", account.balance);
+account.deposit(2000);
+account.withdrawal(1500);
+account.withdrawal(10000);
+
+    </script>
+</body>
+</html>

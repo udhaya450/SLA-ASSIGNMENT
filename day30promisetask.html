@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. Create a Promise that resolves with the message `"Welcome to Js Promise "` after 2 seconds.
+        function welcome()
+        {
+            return new Promise((resolve,reject) =>{
+                setTimeout(() =>{
+                    resolve("Welcome to JS Promise");},2000);
+            });
+        }
+        welcome()
+        .then((result) =>{
+            console.log(result);
+        });
+
+        //2.. Create a Promise that rejects with the message `"Invalid Data"` after 3 seconds.
+        function message()
+        {
+            return new Promise((resolve,reject) =>{
+                setTimeout(() =>{
+                    reject("Invalid Data");},3000);
+                
+            });
+        }
+        message()
+        .catch((error) =>{
+            console.log(error);
+        });
+
+        //3. Write a function `checkNumber(num)` that returns a Promise: Resolve if the number is Odd.Reject if the number is Even
+        function checkNumber(num)
+        {
+            return new Promise((resolve,reject) =>{
+                if(num%2!=0)
+            {
+                resolve("Success");
+            }
+            else
+            {
+                reject("Failure");
+            }
+            });
+        }
+        checkNumber(5)
+        .then((result)=>{
+            console.log(result);
+        })
+        .catch((error)=>{
+            console.log(error);
+        });
+
+        //4. Create a Promise that checks whether a person's age is greater than or equal to 18.Resolve with `"Eligible for Employement"`. Reject with `"Not eligible for Employement"`.
+        
+        let promise=new Promise((resolve,reject) =>{
+            let age=18;
+            if(age>=18)
+        {
+            resolve("Eligible for Employment");
+        }
+        else
+        {
+            reject("Not eligible for employment");
+        }
+        });
+        promise.then((result) =>{
+            console.log(result);
+        })
+        .catch((result) =>{
+            console.log(result);
+        });
+
+        //5.Write a function `Sum(a, b)` using Promises. Resolve with the result of Sum.Reject if `b` is `-value`.
+        function Sum(a,b)
+        {
+            return new Promise((resolve,reject) =>{
+                if(b>=0)
+            {
+                resolve(a+b);
+            }
+            else
+            {
+                reject("B is Negative");
+            }
+            });
+        }
+        Sum(1,-2)
+        .then((result) =>{
+            console.log(result);
+        })
+        .catch((error) =>{
+            console.log(error);
+        });
+
+        //6. Create a Promise that simulates ordering food: Display `"Order placed"`.Resolve with `"Food is ready"` after 5 seconds.
+
+        function orderFood()
+    {
+        return new Promise((resolve,reject) =>{
+
+            setTimeout(()=>{
+                resolve("Food is ready");
+            },5000);
+        });
+    }
+    orderFood()
+    .then((result) =>{
+        console.log(result);
+    })
+
+    //7. Create a Promise that checks whether a string is empty.Resolve if the string contains characters.Reject if the string is empty.
+    function stringCheck(str)
+    {
+        return new Promise((resolve,reject) =>{
+            if(str.length!=0)
+        {
+            resolve("Success");
+        }
+        else
+        {
+            reject("Failure");
+        }
+        });
+    }
+    stringCheck("")
+    .then((result) =>{
+        console.log(result);
+    })
+    .catch((error) =>{
+        console.log(error);
+    });
+
+    //8. Write a function `findEven(num)` that returns a Promise: Resolve if the number is even.Reject if the number is odd.
+    function findEven(num)
+    {
+        return new Promise((resolve,reject) =>{
+            if(num%2==0){
+                resolve("Divisible by 2");
+            }
+            else
+            {
+                reject("Not divisible by 2");
+            }
+
+        });
+    }
+    findEven(2)
+    .then((result) =>{
+        console.log(result);
+    })
+    .catch((error) =>{
+        console.log(error);
+    });
+
+    //9. Create three Promises that resolve after 1 second, 2 seconds, and 3 seconds. Use `Promise.all()` to display all results.
+    function first(){
+    return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            resolve("Get Set")},2000);
+    });
+}
+    function second()
+    {
+        return new Promise((resolve,reject) =>{
+           setTimeout(() =>{
+                resolve("Ready")},1000);
+        });
+    }
+
+    function third(){
+    return new Promise((resolve,reject) =>{
+        setTimeout(() =>{
+            resolve("Go")},3000);
+});
+    }
+    Promise.all([first(),second(),third()])
+    .then((result) =>{
+        console.log(result);
+    });
+
+    //10. Create three Promises where one Promise rejects. Use `Promise.race()` and observe which Promise completes first.
+
+    function first() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("First Promise");
+        }, 3000);
+    });
+}
+
+function second() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            reject("Second Promise rejected");
+        }, 1000);
+    });
+}
+
+function third() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Third Promise");
+        }, 2000);
+    });
+}
+
+Promise.race([first(), second(), third()])
+    .then((result) => {
+        console.log(result);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+</script>
+</body>
+</html>

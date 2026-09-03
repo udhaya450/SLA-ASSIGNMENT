@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.Wait for 2 seconds Create a function that waits for 2 seconds and then prints `"Task completed"`.
+        function WaitTwoSecs()
+        {
+            return new Promise((resolve,reject)=>{
+                setTimeout(()=>{
+                    resolve();},2000);
+                
+            });
+
+        }
+        async function task()
+        {
+            await WaitTwoSecs();
+            console.log("Task Completed");
+        }
+        task();
+
+        //2. Fetch user data Create an async function that returns a user's name after 3 seconds.
+        function fetchUser()
+        {
+            return new Promise((resolve) =>{
+                setTimeout(() =>{
+                    resolve("udhaya");
+                },3000);
+            });
+        }
+        async function fetchname() {
+            let name = await(fetchUser());
+            console.log(name);
+            
+        }
+        fetchname();
+
+        //3. Addition with delay Create an async function that adds two numbers after a 1-second delay.
+
+        function add(a,b)
+        {
+            return new Promise((resolve) =>{
+                
+                setTimeout(() =>{
+                    resolve(a + b);
+                },1000);
+            });
+        }
+        async function display() {
+            let add1=await add(1,2);
+            console.log(add1);
+            
+        }
+        display();
+
+        //4. Sequential execution Create three async functions (`task1`, `task2`, `task3`) and execute them one after another.
+
+        function task1()
+        {
+            return new Promise((resolve) =>{
+                setTimeout(() =>{
+                    console.log("Task1 Completed");
+                    resolve();
+                },1000);
+            });
+        }
+
+        function task2()
+        {
+            return new Promise((resolve) =>{
+                setTimeout(() =>{
+                    console.log("Task2 Completed");
+                    resolve();
+                },1000);
+            });
+        }
+
+        function task3()
+        {
+            return new Promise((resolve) =>{
+                setTimeout(() =>{
+                    console.log("Task3 Completed");
+                    resolve();
+                },1000);
+            });
+        }
+        async function concurrent() {
+            await task1();
+            await task2();
+            await task3();
+            
+        }
+        concurrent();
+
+        //5. Order food Create an async function that simulates ordering food and displays: "Order placed""Food is ready" "Enjoy your meal"
+
+        function placeOrder() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Order placed");
+            resolve();
+        }, 1000);
+    });
+}
+
+function prepareFood() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            console.log("Food is ready");
+            resolve();
+        }, 2000);
+    });
+}
+
+async function orderFood() {
+
+    await placeOrder();
+    await prepareFood();
+
+    console.log("Enjoy your meal");
+}
+
+orderFood();
+
+//6. Download a file Simulate downloading a file using `setTimeout()` and display the download status.
+function downloadFile() {
+
+return new Promise((resolve) => {
+
+    console.log("Download started...");
+
+    setTimeout(() => {
+        resolve("Download completed");
+    }, 3000);
+
+});
+}
+
+async function startDownload() {
+
+let result = await downloadFile();
+
+console.log(result);
+}
+
+startDownload();
+
+//7. Check even or odd Create an async function that checks whether a number is even or odd after a delay.
+function checkNumber(number) {
+
+return new Promise((resolve) => {
+
+    setTimeout(() => {
+
+        if (number % 2 === 0) {
+            resolve("Even");
+        } else {
+            resolve("Odd");
+        }
+
+    }, 1000);
+
+});
+}
+
+async function check() {
+
+let result = await checkNumber(10);
+
+console.log(result);
+}
+
+check();
+
+//8. Handle errors Create an async function that throws an error and handle it using `try...catch`.
+
+async function testError() {
+
+try {
+
+    throw new Error("Something went wrong");
+
+} catch (error) {
+
+    console.log("Error:", error.message);
+
+}
+}
+
+testError();
+
+//9. Multiple promises Create three promises that resolve after different times and use `await` to display their results.
+
+function promise1() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Promise 1 completed");
+        }, 1000);
+    });
+}
+
+function promise2() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Promise 2 completed");
+        }, 2000);
+    });
+}
+
+function promise3() {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve("Promise 3 completed");
+        }, 3000);
+    });
+}
+
+async function runPromises() {
+
+    let result1 = await promise1();
+    console.log(result1);
+
+    let result2 = await promise2();
+    console.log(result2);
+
+    let result3 = await promise3();
+    console.log(result3);
+}
+
+runPromises();
+
+//10. Student result Create an async function that returns `"Pass"` if the mark is greater than 35; otherwise, return `"Fail"`.
+async function studentResult(mark) {
+
+if (mark > 35) {
+    return "Pass";
+} else {
+    return "Fail";
+}
+}
+
+async function checkResult() {
+
+let result = await studentResult(50);
+
+console.log("Result:", result);
+}
+
+checkResult();
+
+</script>
+     
+</body>
+</html>
